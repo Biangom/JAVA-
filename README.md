@@ -1,2 +1,3 @@
-# Server-Client_Chatting_Program_using_MultiThread
-자바
+# 멀티쓰레드를 활용한 채팅 서버/클라이언트 프로그램
+
+
