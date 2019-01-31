@@ -1,4 +1,4 @@
-package com.ssafy;
+package com.kss;
 
 import java.io.*;
 import java.net.*;
@@ -18,8 +18,6 @@ public class ChatServer {
 	int port = 1056;
 
 	public ServerSocket svrSocket = null;
-//	public Socket socket = null;
-	
 	public InputStream inputStream = null;
 	public OutputStream outputStream = null;
 	public ObjectInputStream ois = null;
@@ -118,17 +116,16 @@ public class ChatServer {
 				users.add(u);
 				System.out.println("유저 인원 :" + users.size());
 				
+				// 클라이언트가 접속하면 새로운 쓰레드를 만든다.
 				ChatServerThread t = new ChatServerThread(u);
 				t.start();
 				System.out.println("쓰레드 생성");
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-//				System.out.println("error");
 		} // 클라이언트 소켓 생성
-			
-	}
+	} // end of Go
+	
 	void removeClient(ObjectInputStream ois) {
 		
 		for (User user : users) {

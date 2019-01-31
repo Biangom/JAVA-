@@ -1,4 +1,4 @@
-package com.ssafy;
+package com.kss;
 
 import java.io.*;
 import java.net.*;
