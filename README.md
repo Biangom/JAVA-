@@ -23,7 +23,7 @@
 쓰인 기술엔 다음과 같다..
 
 
-<center><img src="./img/1.jpg" ></center>
+<img src="./img/1.jpg" >
 
 <img src="./img/2.jpg" style="margin-left: auto; margin-right: auto; display: block;">
 
