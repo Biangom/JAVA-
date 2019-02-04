@@ -23,11 +23,11 @@
 쓰인 기술엔 다음과 같다..
 
 
-<img src="./img/1.jpg" style="margin-left: auto; margin-right: auto; display: block;"></img>
+<center><img src="./img/1.jpg" ></img></center>
 
-<img src="./img/2.jpg" align="center"></img>
+<center><img src="./img/2.jpg" ></img></center>
 
-<img src="./img/3.jpg" style="margin-left: auto; margin-right: auto; display: block;"></img>
+<center><img src="./img/3.jpg" ></img></center>
 
 
 
