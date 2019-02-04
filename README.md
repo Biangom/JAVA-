@@ -21,25 +21,25 @@
 <img src="./img/0.jpg" >
 
 서버 측 화면 > 클라이언트 접속 대기 화면
-
-
+<br></br>
 
 
 
 <img src="./img/1.jpg" >
 
 클라이언트 측 화면 > 로그인 화면
-
-
-
+<br></br>
 
 
 
 <img src="./img/2.jpg" style="margin-left: auto; margin-right: auto; display: block
 
 다중 클라이언트 실행화면
-
+<br></br>
 <img src="./img/3.jpg" style="margin-left: auto; margin-right: auto; display: block;" >
+
+<br></br>
+
 
 
 보완할 점
