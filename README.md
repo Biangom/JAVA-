@@ -36,7 +36,7 @@
 
 다중 클라이언트 실행화면
 <br></br>
-<img src="./img/3.jpg" style="margin-left: auto; margin-right: auto; display: block;" >
+<img src="./img/3.jpg" style="margin-left: auto; margin-right: auto; display: block" >
 
 <br></br>
 
