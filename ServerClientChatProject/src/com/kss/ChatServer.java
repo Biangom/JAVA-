@@ -47,7 +47,7 @@ public class ChatServer {
 					for (int i = 0; i < users.size(); i++) {
 						if( users.get(i).equals(this.user)) users.remove(this.user);
 					}
-					System.out.println("남은 인원 :" + users.size());
+					System.out.println("--------- 남은 인원 :" + users.size());
 					return -1; // Exception 발생하면 -1
 				} catch (Exception a) {
 					a.printStackTrace();
@@ -104,7 +104,7 @@ public class ChatServer {
 				
 				User u = new User(socket,ois,oos);
 				users.add(u);
-				System.out.println("유저 인원 :" + users.size());
+				System.out.println("--------- 유저 인원 :" + users.size());
 				
 				// 클라이언트가 접속하면 새로운 쓰레드를 만든다.
 				ChatServerThread t = new ChatServerThread(u);

@@ -20,6 +20,7 @@ public class ChatClient implements ActionListener {
 	JPanel p;			
 	JTextArea ta;		// 채팅창 내용 출력
 	JTextField tf;		// 채팅 메시지 입력란
+	JLabel lbName;
 	
 	// 이름 입력 Frame
 	JFrame inputFrame; 	// 이름 입력 Frame
@@ -99,20 +100,23 @@ public class ChatClient implements ActionListener {
 
 		ta = new JTextArea(); 
 		ta.setEditable(false);			// TextArea 수정못하게 막음
-		f.add(ta, BorderLayout.CENTER); // 중앙에 배치
 		
 		tf = new JTextField();
-		f.add(tf, BorderLayout.SOUTH);	// 남쪽에 배치
 		
 		p = new JPanel();				// 동쪽 영역에 들어갈 묶음(bSend, bExit);
 		p.setLayout(new FlowLayout());
+		JScrollPane scrollpane = new JScrollPane(ta);
 		
 		Button bSend = new Button("Send");
 		Button bExit = new Button("Exit");
+		lbName = new JLabel(uId);
 		p.add(bSend);
 		p.add(bExit);
 		
-		f.add(p, BorderLayout.EAST);
+		f.add(lbName, BorderLayout.NORTH);	// 북쪽에 배치
+		f.add(scrollpane, BorderLayout.CENTER); // 중앙에 배치
+		f.add(tf, BorderLayout.SOUTH);	// 남쪽에 배치
+		f.add(p, BorderLayout.EAST);	// 동쪽에 배치
 		
 		f.setVisible(true); // 화면에 보여주는 작업을 마지막에 한다
 		
@@ -211,21 +215,24 @@ public class ChatClient implements ActionListener {
 	}
 	
 	// 서버로 부터 메시지를 read한다.
-	public void readSocket() {
+	public boolean readSocket() {
 		try {
 			String message = (String) ois.readObject();
 			ta.append(message);
 			System.out.print(message);
-		} catch (NullPointerException e1) {
+		} catch (NullPointerException e) {
+		} catch (SocketException e) {
+			ta.append("서버와 연결이 끊어짐\n");
+			return false;
 		} catch (Exception e) {
-			ta.append("서버 수신 실패");
 		}
+		return true;
 	}
 	
 	// 반복적으로 실행할 메서드
 	public void go() {
 		while(true) {
-			this.readSocket(); // 서버에서 오는 정보를 계속 읽어들인다.
+			if(!this.readSocket()) break; // 서버에서 오는 정보를 계속 읽어들인다.
 		}
 	}
 
