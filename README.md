@@ -27,8 +27,7 @@
 
 <img src="./img/2.jpg" style="margin-left: auto; margin-right: auto; display: block;">
 
-<center><img src="./img/3.jpg" ></img></center>
-
+<img src="./img/3.jpg" style="margin-left: auto; margin-right: auto; display: block;" >
 
 
 
