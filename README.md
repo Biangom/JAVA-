@@ -21,7 +21,7 @@
 실행 화면
 ------------
 쓰인 기술엔 다음과 같다.. 
-<p style="text-align: center;"><img src="./img/1.jpg"></img></p>
+<img src="./img/1.jpg" style="margin-left: auto; margin-right: auto; display: block;"></img>
 
 <img src="./img/2.jpg" align="center"></img>
 
