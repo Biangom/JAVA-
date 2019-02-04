@@ -32,7 +32,7 @@
 
 
 
-<img src="./img/2.jpg" style="margin-left: auto; margin-right: auto; display: block
+<img src="./img/2.jpg" style="margin-left: auto; margin-right: auto; display: block" >
 
 다중 클라이언트 실행화면
 <br></br>
